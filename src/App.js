@@ -17,10 +17,9 @@ class App extends React.Component {
     }
 
     render() {
+		const { monsters } = this.state;
         return <div className='App'>
-			<CardList>
-				Mateus
-			</CardList>
+			<CardList monsters={monsters} />
 		</div>;
     }
 }
