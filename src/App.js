@@ -3,6 +3,8 @@ import React from 'react';
 import { CardList } from './components/card-list/card-list.component';
 import { SearchBox } from './components/search-box/search-box.component';
 
+import './App.css';
+
 class App extends React.Component {
     constructor() {
         super();
@@ -32,10 +34,11 @@ class App extends React.Component {
 
         return (
             <div className="App">
+                <h1>Monsters Roledex</h1>
                 <SearchBox
                     searchField={searchField}
-                    onChange={this.handleChange}
                     placeholder="search monsters"
+                    handleChange={this.handleChange}
                 />
                 <CardList monsters={filteredMonsters} />
             </div>
